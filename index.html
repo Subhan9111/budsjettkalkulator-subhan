@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+<h1>Budsjettkalkulator</h1>
+<p>Få oversikt over inntekter og utgifter.</p>
+</header>
+ 
+<main>
+
+<section>
+<h2>Legg til</h2>
+<form id="budget-form">
+<label for="description">Navn</label>
+<input type="text" id="description"
+placeholder="F.eks. Lønn eller mat" required>
+<label for="amount">Beløp</label>
+<input type="number" id="amount"
+placeholder="F.eks. 500" min="0" required>
+<label for="type">Type</label>
+<select id="type">
+<option value="income">Inntekt</option>
+<option value="expense">Utgift</option>
+</select>
+ 
+ <label for="category">Kategori</label>
+<select id="category">
+<option>Lønn</option>
+<option>Mat</option>
+<option>Bolig</option>
+<option>Transport</option>
+<option>Lån</option>
+<option>Annet</option>
+</select>
+ 
+<button type="submit">Legg til</button>
+ 
+</form>
+</section>
+ 
+        <section>
+<h2>Oversikt</h2>
+ 
+<p>Totale inntekter: <strong id="total-income">0 kr</strong></p>
+<p>Totale utgifter: <strong id="total-expenses">0 kr</strong></p>
+<p>Saldo: <strong id="balance">0 kr</strong></p>
+</section>
+ 
+<section>
+<h2>Mine poster</h2>
+<ul id="budget-list"></ul>
+</section>
+ 
+</main>
+ 
+<footer>
+<p>Budsjettkalkulator</p>
+</footer>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
