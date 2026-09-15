@@ -1,2 +1,3 @@
 # budsjettkalkulator
 
+MIN FØRSTE COMMIT
