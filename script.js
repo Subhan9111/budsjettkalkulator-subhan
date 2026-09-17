@@ -21,6 +21,13 @@ form.addEventListener("submit", function (event) {
     item.style.color = "red";
   }
   list.appendChild(item);
+  const deleteButton = document.createElement("button");
+
+  deleteButton.textContent = "Slett";
+  deleteButton.addEventListener("click", function () {
+    item.remove();
+  });
+  item.appendChild(deleteButton);
 
   if (type === "income") {
     totalIncome += Number(amount);
