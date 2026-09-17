@@ -70,9 +70,12 @@ button:hover{
 
 }
 
-#budget-list{
-    padding: 0;
-    list-style: none;
+#budget-list li {
+    background: darkgray;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #1f4e79;
 }
 
 footer{

@@ -6,7 +6,6 @@ let totalExpenses=0;
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
-    console.log("knappen fungerer!")
 
 
 const description= document.getElementById("description").value;
@@ -14,14 +13,16 @@ const amount= document.getElementById("amount").value;
 const type= document.getElementById("type").value;
 const category= document.getElementById("category").value;
 
-console.log(description);
-console.log(amount);
-console.log(type);
-console.log(category);
 
 const item = document.createElement ("li");
-item.textContent = description +"-"+ category+ ":" + amount+"kr";
-list.appendChild(item);
+if (type === "income") {
+    item.textContent = description + " - " + category + " : + " + amount + "kr";
+    item.style.color = "green"
+} else{
+        item.textContent = description + " - " + category + " : - " + amount + "kr"
+        item.style.color = "red";
+}
+list.appendChild(item)
 
 if (type=== "income") {
     totalIncome += Number (amount);
@@ -42,7 +43,7 @@ if (type=== "income") {
  if(balance < 0) {
     document.getElementById("balance").style.color = "red"
  } else {
-    document.getElementById("balance").style.color = "black"
+    document.getElementById("balance").style.color = "green"
  }
 
  form.reset ();
